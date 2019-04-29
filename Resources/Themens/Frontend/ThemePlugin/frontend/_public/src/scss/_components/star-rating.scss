@@ -1,0 +1,39 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+.icon--star {
+  display: inline-block;
+  font-size: 10px;
+ &::before {
+
+
+   content: '\f005';
+   color: $hover-color;
+ }
+}
+
+.icon--star-empty::before {
+  display: inline-block;
+  font-size: 10px;
+  content: '\f005';
+  color: $price-color;
+}
+
+.icon--star-half {
+  display: inline-block;
+  position: relative;
+  font-size: 10px;
+
+  &::before {
+    content: '\f005';
+    position: relative;
+    color: $price-color;
+  }
+
+  &::after {
+    content: "\f089 ";
+    color: $hover-color;
+    position: absolute;
+    left: 0;
+  }
+
+}

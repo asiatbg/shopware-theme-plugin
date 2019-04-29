@@ -1,0 +1,5 @@
+@mixin icon-element($name-icon, $icon-size) {
+  background: transparent url('../img/icons/' + $name-icon) no-repeat center center;
+  display: inline-block;
+  padding: calc(#{$icon-size} / 2);
+}

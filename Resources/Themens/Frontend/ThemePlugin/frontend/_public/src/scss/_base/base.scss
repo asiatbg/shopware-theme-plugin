@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  transition: margin-left 0.2s;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.text-body1 {
+  font-family: $proxima-nova-regular;
+  font-size: 12px;
+  letter-spacing: 0.48px;
+  line-height: 20px;
+}
+
+.text-body2 {
+  font-family: $proxima-nova-regular;
+  font-size: 14px;
+  letter-spacing: 0.56px;
+  line-height: 20px;
+}
+
+.text-body3 {
+  font-family: $proxima-nova-bold;
+  font-size: 14px;
+  letter-spacing: 0.56px;
+  line-height: 24px;
+}
+
+.all-caps {
+  font-family: $proxima-nova-regular;
+  font-size: 14px;
+  letter-spacing: 0.28px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.super-script {
+  font-family: $proxima-nova-regular;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+  //line-height: 20px;
+}
+
+.text-link {
+  border-bottom: 1px solid $almost-black;
+  font-family: $proxima-nova-semibold;
+  font-size: 14px;
+  letter-spacing: 0.56px;
+  line-height: 20px;
+}

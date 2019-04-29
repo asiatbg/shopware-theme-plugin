@@ -1,0 +1,23 @@
+.slick-arrow {
+  top: 98.725%;
+
+  &::before, &::after {
+    color: $almost-black;
+    font-family: inherit;
+  }
+}
+.slick-next {
+  right: 25% !important;
+}
+.slick-prev {
+  left: 25% !important;
+}
+.pagination-info {
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @extend .text-body1;
+    color: $darker-grey;
+
+}

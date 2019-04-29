@@ -1,0 +1,291 @@
+// Header
+
+.header-main {
+  background-color: $white;
+  left: 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+
+  .header--navigation {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 20px;
+
+
+    @include breakpoint(sm) {
+      padding: 15px 0;
+    }
+
+    .top-bar--navigation {
+      display: flex;
+      position: relative;
+
+      .top-bar--currency {
+        margin-left: 30px;
+
+        @include breakpoint(sm) {
+          display: none;
+        }
+
+        &:hover {
+          +.is-visible {
+            display: block;
+          }
+        }
+      }
+
+      a {
+        margin-left: 30px;
+
+        @include breakpoint(sm) {
+          display: none;
+        }
+
+        &:hover {
+          +.is-visible {
+            display: block;
+
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger-menu-on {
+    @include breakpoint (sm){
+      @include icon-element('menu/menu-on-grey.svg', 20px);
+      cursor: pointer;
+      margin-left: 30px;
+    }
+  }
+
+  .topbar-nav__label {
+    color: $hover-color;
+    display: none;
+    left: 169px;
+    position: absolute;
+  }
+
+  .logo-main {
+
+    img {
+      display: flex;
+      height: 22px;
+      justify-content: center;
+      width: auto;
+
+      @include breakpoint(sm) {
+        height: 30px;
+      }
+    }
+  }
+
+  .shop--navigation {
+
+    .navigation--list {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      position: relative;
+
+      li {
+        list-style-type: none;
+        margin-right: 30px;
+
+        &:hover {
+          +.is-visible {
+            display: block;
+          }
+        }
+      }
+
+      .entry--account {
+
+        @include breakpoint(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+  .navigation--list__label {
+    color: $hover-color;
+    display: none;
+    position: absolute;
+    right: 174px;
+
+    @include breakpoint (sm) {
+      right: 124px;
+    }
+  }
+}
+
+.icon--mail {
+  @include icon-element('icon-mail-grey.svg', 16px);
+  background-size: 100% auto;
+
+  &:hover {
+    background-image: url('../img/icons/icon-mail-red.svg');
+  }
+}
+
+.icon--sales {
+  @include icon-element('icon-sell-grey.svg', 18px);
+
+  &:hover {
+    background-image: url('../img/icons/icon-sell-red.svg');
+  }
+}
+
+.search--display {
+  @include icon-element('icon-search-grey.svg', 18px);
+  background-size: auto 100%;
+
+  &:hover {
+    background-image: url('../img/icons/icon-search-red.svg');
+  }
+}
+
+.icon--account {
+  @include icon-element('icon-user-grey.svg', 18px);
+  //background-size: auto 100%;
+
+  &:hover {
+    background-image: url('../img/icons/icon-user-red.svg');
+  }
+}
+
+.current-flag {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.cart--link {
+  color: $dark-grey;
+  font-family: $proxima-nova-regular;
+  font-size: 9px;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  .icon--cart {
+    align-items: center;
+    border: 1px solid $dark-grey;
+    border-radius: 50%;
+    display: flex;
+    height: 16px;
+    justify-content: center;
+    line-height: 0;
+    width: 16px;  // 18 px - 2px from border
+
+    &:hover {
+      border-color: $hover-color;
+    }
+  }
+}
+
+
+// Category pages
+.is--ctl-listing {
+  .header-main {
+    background-color: transparent;
+    position: absolute;
+  }
+
+  // Change logo when the category page was shown
+  .logo--link {
+    img {
+      content: url("../img/SG_white_horizontal_logo.svg");
+
+      @include breakpoint(sm) {
+        content: url("../img/SG_white_stacked_logo.svg");
+      }
+    }
+  }
+
+  .sidebar-main {
+    .logo--link {
+      img {
+        content: '';
+
+        @include breakpoint(sm) {
+          content: '';
+        }
+      }
+    }
+  }
+
+
+  // Change color icons when the category page was shown
+
+  .icon--mail {
+    @include icon-element('light-grey-icons/icon-mail-light-grey.svg', 16px);
+    background-size: auto 100%;
+
+    &:hover {
+      background-image: url('../img/icons/white-icons/icon-mail-white.svg');
+    }
+  }
+
+  .icon--cart {
+    border-color: $price-color;
+
+    &:hover {
+      border-color: $white;
+    }
+  }
+  .cart--link {
+    color: $price-color;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .icon--account {
+    @include icon-element('light-grey-icons/icon-user-light-grey.svg', 18px);
+
+    &:hover {
+      background-image: url('../img/icons/white-icons/icon-user-white.svg');
+    }
+  }
+
+
+  .search--display {
+    @include icon-element('light-grey-icons/icon-search-light-grey.svg', 18px);
+
+    &:hover {
+      background-image: url('../img/icons/white-icons/icon-search-white.svg');
+    }
+  }
+
+  .icon--sales {
+    @include icon-element('light-grey-icons/icon-sell-light-grey.svg', 18px);
+    background-position: center 3px;
+    &:hover {
+      background-image: url('../img/icons/white-icons/icon-sell-white.svg');
+    }
+  }
+
+  .hamburger-menu-on {
+    @include breakpoint (sm){
+      @include icon-element('menu/menu-on-light-grey.svg', 20px);
+    }
+  }
+
+
+  .navigation--list__label {
+    color: $white;
+  }
+
+  .topbar-nav__label {
+    color: $white;
+  }
+
+}

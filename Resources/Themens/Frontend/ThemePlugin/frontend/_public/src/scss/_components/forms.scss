@@ -1,0 +1,17 @@
+// Forms for Checkout, Account Login, My Account
+
+input {
+  border: none;
+  padding: 24px 30px;
+
+  &:hover,
+  &:active {
+
+    //border: 1px solid $almost-black;
+    color: $almost-black;
+  }
+
+  //&:invalid {
+  //  border: 1px solid $alert-messaging;
+  //}
+}

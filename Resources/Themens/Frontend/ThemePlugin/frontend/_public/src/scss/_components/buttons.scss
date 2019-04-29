@@ -1,0 +1,53 @@
+button {
+  font-family: $proxima-nova-regular;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+
+// Homepage Modular Grid, My account
+.btn--primary {
+  background-color: $almost-black;
+  color: $white;
+  height: 40px;
+  padding: 16px;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+// Sell
+.btn--sell {
+  background-color: $white;
+  border: 1px solid $almost-black;
+  color: $almost-black;
+  height: 50px;
+  padding: 20px 30px;
+
+  &:hover {
+    background-color: $almost-black;
+    color: $white;
+  }
+}
+
+// Mobile Filtering, Mobile Sell Page
+.btn--filter {
+  background-color: $almost-black;
+  color: $white;
+  padding: 20px 0;
+  width: 100%;
+}
+
+// PDP, Checkout, Cart
+.btn-add-bag {
+  background-color: $almost-black;
+  color: $white;
+  padding: 26px 0;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}

@@ -1,0 +1,90 @@
+.emotion--banner-slider {
+  overflow: hidden;
+
+  .banner-slider--image {
+    display: block;
+    width: 100vw;
+    height: calc(80vh - 92px);
+    object-fit: cover;
+    min-height: 500px;
+
+    @include breakpoint(xl) {
+      height: calc(80vh - 92px);
+    }
+  }
+
+  .banner-slider--slide {
+    display: flex;
+    width: 100vw;
+
+  }
+
+  .banner-slider--container {
+    position: relative;
+  }
+
+  .banner-slider--banner {
+    width: 100vw !important;
+  }
+
+  .slider-link--wrapper {
+    position: absolute;
+    bottom: 50%;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      font-family: $proxima-nova-bold;
+      font-size: 14px;
+      color: $almost-black;
+      text-decoration: underline;
+      text-decoration-color: $price-color;
+    }
+  }
+
+  .image-slider--dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+
+    .dot--link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: transparent;
+      width: 45px;
+      height: 45px;
+      transition: all 0.3s ease;
+
+      &::after {
+        content: '';
+        display: block;
+        border-radius: 100%;
+        background-color: $price-color;
+        width: 6px;
+        height: 6px;
+      }
+
+      &:hover::after {
+        background-color: $darker-grey;
+        width: 10px;
+        height: 10px;
+        transition: all 0.3s ease;
+      }
+    }
+
+    .is--active::after {
+      background-color: $darker-grey;
+    }
+
+
+  }
+}

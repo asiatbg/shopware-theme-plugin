@@ -1,0 +1,247 @@
+// -- Category banner --
+
+.category-hero--image {
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+
+  .category-hero--title {
+    color: $white;
+    text-transform: capitalize;
+    z-index: 1;
+  }
+
+  .category-hero--text {
+    color: $white;
+    max-width: 350px;
+    text-align: center;
+    z-index: 1;
+  }
+}
+
+// -- Listing --
+.listing--content {
+  width: 100%;
+
+  // Fliter/sorting actions
+  .listing--top-navigation {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    margin-bottom: 1px;
+    width: 100%;
+
+    .category-title {
+      width: 60%;
+      height: 100%;
+      margin-left: 30px;
+      border-bottom: 1px solid $price-color;
+      color: $background-icons;
+      display: flex;
+      align-items: center;
+
+      @include breakpoint(sm) {
+        margin: 0;
+        padding-left: 30px;
+        width: 100%;
+      }
+
+      .category--product-count {
+        color: $price-color;
+        margin-left: 5px;
+      }
+    }
+    .action--sort {
+      width: 20%;
+      height: 100%;
+      border-bottom: 1px solid $price-color;
+      justify-content: center;
+
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
+  }
+
+  .listing--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .action--filter-options, off-canvas, is--ajax-reload{
+      background-color: $super-light-grey;
+      width: 0;
+      flex: 0 0;
+      transition: all 0.5s ease;
+      margin-top: 1px;
+
+      @include breakpoint (sm) {
+        transition: none;
+      }
+    }
+
+    & > .is--collapsed {
+
+      flex: 1 19%;
+    }
+
+    .is--open {
+
+      flex: 1 20%;
+    }
+
+    .listing--container {
+      flex: 1 80%;
+    }
+
+    .image--media {
+      max-width: 100%;
+    }
+
+  }
+
+
+  // -- Products grid --
+  .listing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 30px;
+    grid-auto-rows: auto;
+    padding: 0 30px;
+    margin-bottom: 80px;
+
+    @include breakpoint (sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint (xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product--box {
+      &:hover {
+        .product--rating-container {
+
+          opacity: 1;
+        }
+
+        .price--default {
+          color: $hover-color;
+        }
+      }
+    }
+
+    .product--rating-container {
+      order: 4;
+      opacity: 0;
+    }
+
+    .product--badges {
+      display: none;
+    }
+
+    .product--info {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .product--image {
+
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      .image--element {
+        width: 100%;
+
+        .image--media {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 100%;
+          height: 0;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .product--description {
+      display: none;
+    }
+
+    .product--title {
+      @extend .text-body1;
+      text-transform: uppercase;
+      color: $background-icons;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+
+    .product--price-info {
+      .price--unit {
+        display: none;
+      }
+
+      .price--default {
+        @extend .text-body1;
+        text-transform: uppercase;
+        color: $price-color;
+      }
+
+      .price--pseudo {
+        display: none;
+      }
+    }
+
+    .product--actions {
+      display: none;
+    }
+  }
+}
+
+.listing--bottom-paging {
+  display: none;
+}
+
+.listing--paging {
+  display: none;
+}
+.topseller {
+  display: none;
+}
+
+.infinite--actions {
+  display: none;
+}
+
+

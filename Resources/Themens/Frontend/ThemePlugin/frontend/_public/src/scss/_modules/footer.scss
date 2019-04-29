@@ -1,0 +1,120 @@
+.footer-main {
+  background-color: $almost-black;
+  padding: 80px 0;
+  @include breakpoint(sm) {
+    padding: 80px 15px;
+  }
+
+  .column--headline {
+    color: $white;
+    margin-bottom: 40px;
+    margin-top: 5px;
+  }
+
+  
+  .footer--logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      @include breakpoint(sm) {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .newsletter--field {
+    box-sizing: border-box;
+    background-color: transparent;
+    border-bottom: 2px solid $white;
+    width: 100%;
+    padding: 15px;
+    color: $white;
+    outline: none;
+
+    &:hover {
+      border-bottom: 2px solid $white;
+    }
+  }
+
+  .column--newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+
+    .column--content {
+      width: calc(100vw/3);
+      max-width: 400px;
+
+      @include breakpoint(sm) {
+        width: 100%;
+      }
+    }
+
+    .content {
+      position: relative;
+
+      .newsletter--button {
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        height: 100%;
+        background-color: transparent;
+        border: 0;
+
+        .icon--mail {
+          width: 100%;
+          background: transparent url("../img/icons/icon-return-white.svg") no-repeat center center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+
+  .footer--columns {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    @include breakpoint(sm) {
+      flex-flow: column;
+      //align-items: center;
+    }
+
+    .footer--column {
+      width: calc(100vw/6 - 2.5%);
+      margin: 0 34px;
+      transform: translateX(25%);
+
+
+      @include breakpoint(sm) {
+        margin: 0 0 40px ;
+        transform: translateX(0);
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+    }
+
+    .navigation--entry {
+      margin-bottom: 5px;
+    }
+
+    .navigation--link {
+      @extend .text-body2;
+      color: $background-icons;
+      vertical-align: middle;
+      white-space: nowrap;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
